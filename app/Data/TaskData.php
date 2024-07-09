@@ -13,13 +13,13 @@ use Spatie\LaravelData\Transformers\DateTimeInterfaceTransformer;
 class TaskData extends Data
 {
     public function __construct(
-        public ?int            $id,
-        public string          $title,
-        public string          $description,
-        public string          $status,
+        public ?int     $id,
+        public string   $title,
+        public string   $description,
+        public string   $status,
         #[WithCast(DateTimeInterfaceCast::class, format: 'Y-m-d')]
         #[WithTransformer(DateTimeInterfaceTransformer::class, format: 'Y-m-d')]
-        public DateTime        $endDate,
+        public DateTime $endDate,
     )
     {
     }
